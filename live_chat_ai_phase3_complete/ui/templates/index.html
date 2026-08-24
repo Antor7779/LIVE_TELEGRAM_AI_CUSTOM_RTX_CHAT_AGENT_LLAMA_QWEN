@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Chat AI</title>
+<link rel="stylesheet" href="/ui/css/app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">LIVE CHAT AI</div>
+    <button id="newChat" class="new-chat">＋ New Chat</button>
+    <div id="conversationList" class="conversation-list"></div>
+    <div class="sidebar-footer">
+      <span id="healthDot" class="dot"></span>
+      <span id="healthText">Checking Ollama…</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div id="chatTitle" class="chat-title">New Chat</div>
+        <div id="status" class="status">Ready</div>
+      </div>
+      <div class="controls">
+        <select id="model"></select>
+        <select id="persona"></select>
+      </div>
+    </header>
+
+    <section id="messages" class="messages"></section>
+
+    <div class="composer">
+      <textarea id="input" rows="3" placeholder="Message your local AI…"></textarea>
+      <div class="composer-bottom">
+        <span class="hint">Enter to send · Shift+Enter for a new line</span>
+        <div>
+          <button id="stop" class="secondary" disabled>Stop</button>
+          <button id="send" class="send">Send</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/ui/js/app.js"></script>
+</body>
+</html>
